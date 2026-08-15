@@ -1,2 +1,10 @@
-# Esta branch (exe-publish) so' versiona o executavel de distribuicao -
-# aqui, ao contrario da branch de codigo-fonte, ele NAO e' ignorado.
+# Esta branch (main) so' versiona o executavel de distribuicao. Ignora
+# TUDO por padrao e libera so' o que deve estar aqui, de proposito: como
+# main e source compartilham a mesma pasta no disco, arquivos soltos da
+# source (config.ini com o TOKEN, log.dom, etc.) ficam fisicamente
+# presentes aqui tambem - isso protege contra um "add tudo" acidental
+# (lazygit, "git add -A"...) trazendo eles junto.
+*
+!.gitignore
+!README.md
+!coletor_monitor.exe
